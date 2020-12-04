@@ -56,7 +56,6 @@ pipwin==0.5.0
 playsound==1.2.2
 proglog==0.1.9
 psycopg2==2.8.6
-PyAudio @ file:///C:/Users/SYLVA/Desktop/My%20python%20versions/PyAudio-0.2.11-cp39-cp39-win_amd64.whl
 pycparser==2.20
 PyDispatcher==2.0.5
 pyFirmata==1.1.0
