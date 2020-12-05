@@ -24,13 +24,16 @@ class VideoAdmin(admin.ModelAdmin):
 
 class EventAdmin(admin.ModelAdmin):
     """to help me display it in a cooler format"""
-    list_display = ('event', 'date', 'location')
+    list_display = ('name', 'event', 'date', 'location')
 
 
 class ContactInfoAdmin(admin.ModelAdmin):
     """to help me display it in a cooler format"""
     list_display = ('email', 'phoneNumber', 'hotline', 'address')
 
+class NewsletterAdmin(admin.ModelAdmin):
+    """to help me display it in a cooler format"""
+    list_display = ('email', 'time')
 
 admin.site.register(YoutubeFeed, YoutubeFeedAdmin)
 admin.site.register(Music, MusicAdmin)
@@ -38,4 +41,4 @@ admin.site.register(Message, MessageAdmin)
 admin.site.register(Video, VideoAdmin)
 admin.site.register(Event, EventAdmin)
 admin.site.register(ContactInfo, ContactInfoAdmin)
-admin.site.register(Newsletter)
+admin.site.register(Newsletter, NewsletterAdmin)

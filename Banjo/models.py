@@ -1,4 +1,6 @@
 from django.db import models
+import datetime
+from django.utils import timezone
 
 # Create your models here.
 class YoutubeFeed(models.Model):
@@ -32,7 +34,7 @@ class Message(models.Model):
     email = models.CharField(max_length=150, null=True, blank=True)
     website = models.CharField(max_length=200, null=True, blank=True)
     comment = models.CharField(max_length=1000, null=True, blank=True)
-    time = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+    time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.name
@@ -59,11 +61,11 @@ class Event(models.Model):
     name = models.CharField(max_length=30, null=False, blank=True)
     image = models.ImageField(null=True, blank=True)
     date = models.CharField(max_length=20, null=False, blank=True)
-    event = models.CharField(max_length=50, null=False, blank=True)
+    event = models.CharField(max_length=60, null=False, blank=True)
     location = models.CharField(max_length=50, null=False, blank=True)
 
     def __str__(self):
-        return self.event
+        return self.name
 
     @property
     def imageURL(self):
@@ -75,7 +77,6 @@ class Event(models.Model):
 
 
 class ContactInfo(models.Model):
-
     email = models.EmailField(max_length=150, null=False, blank=True)
     phoneNumber = models.CharField(max_length=20, null=False, blank=True)
     address = models.CharField(max_length=30, null=False, blank=True)
@@ -87,6 +88,8 @@ class ContactInfo(models.Model):
 
 class Newsletter(models.Model):
     email = models.EmailField(max_length=200, null=False, blank=False)
+    time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.email
+
