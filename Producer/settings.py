@@ -25,7 +25,7 @@ SECRET_KEY = 'zd&y2l34112s&5i)dlzah0zlo#0c%114eevq(k+6(21bi%7wgm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['herokudjangomusicapp.herokuapp.com']
+ALLOWED_HOSTS = ['herokudjangomusicapp.herokuapp.com']#
 
 
 # Application definition
